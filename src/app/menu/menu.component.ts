@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ClickHistoryService } from './../services/click-history.service'
+
 @Component({
   selector: 'menu',
   templateUrl: './menu.component.html',
@@ -14,9 +16,13 @@ export class MenuComponent implements OnInit {
       {name: 'Мы на карте', link: 'map'},
   ];
 
-  constructor() { }
+  constructor(private clickHistoryService: ClickHistoryService) { }
 
   ngOnInit() {
   }
+
+    saveLink(name: string): void{
+      this.clickHistoryService.saveLink(name);
+    }
 
 }

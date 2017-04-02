@@ -1,7 +1,7 @@
 <table style="width: 100%" border="1">
   <tr>
     <td *ngFor="let menu of menuArr">
-      <a [routerLink]=" '/' + [menu.link] " class="btn btn-default" role="button">
+      <a [routerLink]=" '/' + [menu.link] " (click)="saveLink(menu.name)" class="btn btn-default" role="button">
         {{menu.name}}
       </a>
     </td>

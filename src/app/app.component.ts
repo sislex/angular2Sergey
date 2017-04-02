@@ -1,35 +1,22 @@
 import { Component } from '@angular/core';
 
+import { ClickHistoryService } from './services/click-history.service'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'count:';
+private  title1: any = null;
+private  title2: any = null;
 
-  count: number = 0;
+private arr1 = null;
+private arr2 = null;
 
-  left: number = 100;
-
-  divLeft(){
-    return {
-      height: '50px',
-      width: '50px',
-      background: '#434',
-      position: 'absolute',
-      left: this.left + 'px',
-      top: '150px'
-    };
-  }
-
-  getName(){
-    return 'привет Серега';
-  }
-
-  buttonClick(){
-    this.left++;
-  }
+constructor(private clickHistoryService: ClickHistoryService){
+  console.log(clickHistoryService.namesList);
+}
 
 
 }

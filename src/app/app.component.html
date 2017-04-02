@@ -1,3 +1,9 @@
 
 <router-outlet></router-outlet>
 
+<table border="1">
+    <tr *ngFor="let name of clickHistoryService.namesList">
+        <td>{{name}}</td>
+    </tr>
+</table>
+
