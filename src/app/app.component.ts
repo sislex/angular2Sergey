@@ -14,6 +14,23 @@ private  title2: any = null;
 private arr1 = null;
 private arr2 = null;
 
+private arr = [
+  {
+    'name': 'name1',
+    'arr': [
+      'qwe1',
+      'qwe2'
+    ]
+  },
+  {
+    'name': 'name2',
+    'arr': [
+      'qwe3',
+      'qwe4'
+    ]
+  },
+];
+
 constructor(private clickHistoryService: ClickHistoryService){
   console.log(clickHistoryService.namesList);
 }

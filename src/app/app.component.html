@@ -7,3 +7,20 @@
     </tr>
 </table>
 
+<table border="1">
+    <tr>
+        <td>
+            <select [(ngModel)]="subItem">
+                <option [ngValue]="item.arr" *ngFor="let item of arr">{{item.name}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select [(ngModel)]="subItem2">
+                <option [ngValue]="item" *ngFor="let item of subItem">{{item}}</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
