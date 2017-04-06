@@ -23,4 +23,37 @@
         </td>
     </tr>
 </table>
+<table border="1">
+    <tr>
+        <td>
+            <select [(ngModel)]="groupMuscles">
+                <option [ngValue]="value" *ngFor="let value of nameListGroupMuscles">{{value.name_group_muscles}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr *ngIf="groupMuscles">
+        <td>
+            <select [(ngModel)]="nameExercises">
+                <option [ngValue]="value" *ngFor="let value of groupMuscles.nameListExercises">{{value}}</option>
+                <option>Выберите упражнение</option>
+            </select>
+        </td>
+        <td>
+                <input class="form-control" type="text" [(ngModel)]="nameExercises" placeholder="Введите название">
+        </td>
+    </tr>
+</table>
+<hr>
+<table border="1">
+    <tr *ngFor="let iterator of rows(); let i = index">
+        <td>
+            {{i}}
+            <select [(ngModel)]="selectedArr[i]">
+                <option [ngValue]="item" *ngFor="let item of possibleSelect(selectedArr[i])">
+                    {{item}}
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>
 
